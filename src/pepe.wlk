@@ -130,3 +130,29 @@ object pepe {
 		return bonoPorPresentismo.valor(self)
 	}
 }
+
+object sofia {
+	
+	var categoria = gerente
+	var bonoPorResultado = resultadoNulo
+	
+	method categoria (_categoria){
+		categoria = _categoria
+	}
+	
+	method bonoPorResultado (_bonoPorResultado){
+		bonoPorResultado = _bonoPorResultado
+	}
+	
+	method sueldo(){
+		return self.neto() + self.resultado()
+	}
+	
+	method neto(){
+		return categoria.neto() * 1.3
+	}
+	
+	method resultado(){
+		return bonoPorResultado.valor(self)
+	}
+}
